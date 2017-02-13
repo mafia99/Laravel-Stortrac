@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 9, 2017, 6:50:01 PM
+    Author     : Muhammad Ali Fayyaz
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: 400;
+    font-family: 'Lato';
+    background-color: #EEEEEE;
+    color: #838383;
+    
+}
+
+#auth-layout .panel-default > .panel-heading{
+    background-color: #fff;
+    border: none;
+    color:#000;
+    padding: 20px 30px;
+    
+}
+#auth-layout .panel-default > .panel-body{
+    padding: 0 30px 10px;
+}
+#auth-layout .panel-default{
+    margin-top: 200px;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#auth-layout .forgot{
+    float:right;
+    padding: 0;
+    color:#A5A5A5;
+    text-decoration: underline;
+    font-weight: normal;
+}
+#auth-layout .btn-primary{
+    background-color: #45ABF6;
+    width: 100%;
+    border-radius: 2px;
+    border-color: #45ABF6;
+    padding: 8px 12px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+#auth-layout .form-control{
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: #FAFAFA;
+    font-weight: 400;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+#auth-layout .move-center{
+    margin: auto;
+    float: none;
+}
+#auth-layout .form-group .text-field {
+  position: relative;
+}
+#auth-layout .form-group .text-field:before {
+  font-family: "FontAwesome";
+  font-size: 14px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+#auth-layout .form-group .text-field input {
+  text-indent: 20px;
+  height: 40px;
+}
+#auth-layout .form-group .user-icon:before{
+    content: "\f007";
+}
+#auth-layout .form-group .passwod-icon:before{
+    content: "\f084";
+}
+.navbar-nav{
+    height: 50px;
+}
+.navbar-default{
+    background-color: #E0E0E0;
+    
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border:none;
+    font-weight: 600;
+    font-size: 16px;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #000;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover{
+    background-color: #03A9F5;
+    color:#fff;
+}
+.pagecrumb h3{
+    color:#000;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+.pagecrumb h3 label{
+    color:#838383;
+    font-weight: normal;
+}
+#map{
+    width: 100%;
+    height:250px;
+}
+.fa{
+    color:#bdbdbd;
+}
+.fa-inverse{
+    color:#838383;
+}
+.fa-stack{
+    height: 1em;
+    line-height: 1em;
+}
+.fa-stack-1x{
+    font-size: 0.5em;
+}
+.fa-stack-2x{
+    font-size: 1em;
+   
+}
+.panel {
+    border-radius: 0;
+}
+.white-panel .panel-default > .panel-heading{
+    background-color: #fff;
+}
+.table > thead > tr > th{
+    color:#000;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > td, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > thead > tr > th{
+    border-bottom: none;
+    border-top: none;
+}
+.footer{
+    height: 100px;
+}
