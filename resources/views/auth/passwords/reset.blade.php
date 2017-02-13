@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-4 move-center top-200">
+            <img src="{{ asset('images/StorTracLogo1.png')}}" />
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 
@@ -14,11 +15,12 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}">
-
+                                <div class="text-field user-icon">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" placeholder="email">
+                                </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -28,11 +30,12 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
+                                <div class="text-field passwod-icon">
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                                </div>  
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -42,10 +45,11 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
-
+                                <div class="text-field passwod-icon">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
+                                </div>
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
