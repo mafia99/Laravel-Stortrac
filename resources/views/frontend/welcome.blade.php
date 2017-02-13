@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-md-12 pagecrumb">
             <h3 class="panel-title pull-left">05-Cubesmart L.P <label>05-017 Hanover Park</label></h3>
-            
+            <div class="pull-right"><img src="{{ asset('images/StorTracLogo1.png')}}" /></div>
+            <div class="clearfix"></div>
         </div>
     </div>
     <div class="row">

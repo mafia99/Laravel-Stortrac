@@ -35,10 +35,15 @@ body {
     padding: 0 30px 10px;
 }
 #auth-layout .panel-default{
-    margin-top: 200px;
+    
     border-radius: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+#auth-layout .top-200{
+    margin-top: 200px!important;
+    text-align: center;
+}
+
 #auth-layout .forgot{
     float:right;
     padding: 0;
@@ -113,7 +118,7 @@ body {
 }
 .pagecrumb h3{
     color:#000;
-    margin-bottom: 18px;
+    line-height: 40px;
     font-weight: 700;
 }
 .pagecrumb h3 label{
