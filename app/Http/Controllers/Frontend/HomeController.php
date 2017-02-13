@@ -16,6 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //customer Id = 468
         return View('frontend.welcome');
     }
 

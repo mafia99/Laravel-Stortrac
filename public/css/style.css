@@ -144,10 +144,19 @@ body {
 }
 .fa-stack-2x{
     font-size: 1em;
-   
+}
+.width-1em{
+    width: 1em;
 }
 .panel {
     border-radius: 0;
+}
+.jobs-panel i{
+    color: #23AF88;
+    font-size: 1.2em;
+}
+.jobs-panel tr td:last-child{
+    text-align: center;
 }
 .white-panel .panel-default > .panel-heading{
     background-color: #fff;
@@ -164,6 +173,18 @@ body {
 .table > thead > tr > th{
     border-bottom: none;
     border-top: none;
+}
+.map-view, .street-view,
+.map-view:hover, .street-view:hover{
+    padding: 6px;
+    color: #000;
+    text-decoration: none;
+}
+.map-view.active, .street-view.active{
+    color:#03A9F5;
+    background-color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
 }
 .footer{
     height: 100px;

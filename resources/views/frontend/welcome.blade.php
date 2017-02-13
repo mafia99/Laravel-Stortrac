@@ -4,7 +4,7 @@
 <div class="container white-panel">
     <div class="row">
         <div class="col-md-12 pagecrumb">
-            <h3 class="panel-title pull-left">05-Cubesmart L.P <label>05-017 Hanover Park</label></h3>
+            <h3 class="panel-title pull-left">05-Cubesmart L.P <label>05-026 Schaumburg</label></h3>
             <div class="pull-right"><img src="{{ asset('images/StorTracLogo1.png')}}" /></div>
             <div class="clearfix"></div>
         </div>
@@ -13,7 +13,7 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default jobs-panel">
                         <div class="panel-heading">
                             <h3 class="panel-title">Recent Jobs</h3>
                             <div class="pull-right">
@@ -31,22 +31,34 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td>J696</td>
+                                    <td>Matt Knize</td>
+                                    <td>Mon 04/11/16</td>
+                                    <td><i class="fa fa-check-circle"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
+                                    <td>J584</td>
+                                    <td>Jsaon Smith</td>
+                                    <td>Wed 03/16/16</td>
+                                    <td><i class="fa fa-check-circle"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
+                                    <td>J296</td>
+                                    <td>Lou Alers</td>
+                                    <td>Mon 01/18/16</td>
+                                    <td><i class="fa fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>J283</td>
+                                    <td>Lou Alers</td>
+                                    <td>Fri 01/15/16</td>
+                                    <td><i class="fa fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>J119</td>
+                                    <td>Ken Lukes</td>
+                                    <td>Tue 12/08/15</td>
+                                    <td><i class="fa fa-check-circle"></i></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -55,7 +67,7 @@
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Recent Invocies</h3>
+                            <h3 class="panel-title">Recent Invoices</h3>
                             <div class="pull-right">
 
                             </div>
@@ -72,25 +84,64 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td><i class="fa fa-search"></i></td>
+                                    <td>00000519</td>
+                                    <td>J696</td>
+                                    <td>$40.50</td>
+                                    <td>Wed 04/13/16</td>
+                                    <td>
+                                        <span class="fa-stack fa-lg width-1em">
+                                            <i class="fa fa-square-o fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x"></i>
+                                        </span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td><i class="fa fa-search"></i></td>
+                                    <td>00000419</td>
+                                    <td>J584</td>
+                                    <td>$342.00</td>
+                                    <td>Fri 03/18/16</td>
+                                    <td>
+                                        <span class="fa-stack fa-lg width-1em">
+                                            <i class="fa fa-square-o fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x"></i>
+                                        </span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td><i class="fa fa-search"></i></td>
+                                    <td>00000181</td>
+                                    <td>J296</td>
+                                    <td>$43.50</td>
+                                    <td>Mon 01/18/16</td>
+                                    <td>
+                                        <span class="fa-stack fa-lg width-1em">
+                                            <i class="fa fa-square-o fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>00000166</td>
+                                    <td>J283</td>
+                                    <td>$92.25</td>
+                                    <td>Fri 01/15/16</td>
+                                    <td>
+                                        <span class="fa-stack fa-lg width-1em">
+                                            <i class="fa fa-square-o fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>00000034</td>
+                                    <td>J119</td>
+                                    <td>$00.00</td>
+                                    <td>Tue 12/08/15</td>
+                                    <td>
+                                        <span class="fa-stack fa-lg width-1em">
+                                            <i class="fa fa-square-o fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x"></i>
+                                        </span>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -120,21 +171,27 @@
                         <div class="panel-heading">
                             <h3 class="panel-title pull-left">Contacts</h3>
                             <div class="pull-left">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>
-                                </span>Bruce Goldfarb <br />
+                                <p>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                                    </span>Bruce Goldfarb
+                                </p>
+
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                                </span>Bruce Goldfarb <br />
+                                </span>(847) 895-0575 
                             </div>
                             <div class="pull-right text-right">
-                                stor0871@cubesmart.com <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                                </span> <br />
-                                25W630 West Army Trail Road, Hanover Park, IL 60133 <span class="fa-stack fa-lg">
+                                <p>
+                                    stor0871@cubesmart.com <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </p>
+
+                                1730 Irving Park Rd, Hanover Park, IL 60133 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -149,11 +206,11 @@
                 <div class="col-md-12" style="position: relative">
                     <div id="map"></div>
                     <div class="panel panel-default" style="bottom: -52px;position: absolute;width: 96.3%;z-index: 99">
-                        <div class="panel-heading">
-                            <h3 class="panel-title pull-left">25W630 West Army Trail Road, Hanover Park, IL 60133</h3>
+                        <div class="panel-heading" style="height: 50px;padding: 15px;">
+                            <h3 class="panel-title pull-left">1730 Irving Park Rd, Hanover Park, IL 60133</h3>
                             <div class="pull-right">
-                                <a href="javascript:void(0)" class="btn btn-default active" onclick="togglePanorama();" >Map View</a>
-                                <a href="javascript:void(0)" class="btn btn-default" onclick="togglePanorama();" >Street View</a>
+                                <a href="javascript:void(0)" class="map-view active" onclick="togglePanorama('map');" >Map View</a>
+                                <a href="javascript:void(0)" class="street-view " onclick="togglePanorama('street');" >Street View</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -165,16 +222,16 @@
             </div>
         </div>
         <div class="col-md-4">
-
+            <img src="{{ asset('images/AdditionalCameras.png')}}" style="width: 100%;"/>
         </div>
     </div>
 </div>
 <script>
 
     var map;
-    var isPanorama = 0;
+
     function initMap() {
-        var myLatLng = {lat: 41.940407, lng: -88.1277977};
+        var myLatLng = {lat: 42.0066092, lng: -88.1498724};
 
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
@@ -189,21 +246,25 @@
             label: {
                 color: '#8C171A',
                 fontWeight: 'bold',
-                text: '25W630 West Army Trail Road',
+                text: '1730 Irving Park Rd',
             }
 
         });
     }
-    function togglePanorama() {
-        if (isPanorama) {
+    function togglePanorama(option) {
+        if (option == 'map') {
             map.setMapTypeId('roadmap');
+            $('.street-view').removeClass('active');
+            $('.map-view').addClass('active');
             //$('#message').empty().append('Click here to take a tour of our office.');
-            isPanorama = 0;
+
         } else {
             //map.streetView.setVisible(true);
             map.setMapTypeId('satellite');
+            $('.street-view').addClass('active');
+            $('.map-view').removeClass('active');
             //$('#message').empty().append('Back to the map.');
-            isPanorama = 1;
+
         }
     }
     //initMap();
