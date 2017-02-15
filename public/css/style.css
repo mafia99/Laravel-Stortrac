@@ -194,3 +194,6 @@ body {
 .footer{
     height: 100px;
 }
+.modal-backdrop.in{
+    opacity: 0.3;
+}

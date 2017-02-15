@@ -37,7 +37,7 @@
                             <!--<span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('location', ['1' => '05-Cubesmart L.P 05-026 Schaumburg'], null,['class' =>'form-control'], ['placeholder' => 'Select Customer & Location']); !!}
+                                {!! Form::select('location', ['' => 'Please Select Customer & Location','1' => '05-Cubesmart L.P 05-026 Schaumburg'], null,['class' =>'form-control'], ['placeholder' => 'Select Customer & Location']); !!}
                             </div>
                         </div>
                         <div class="form-group row">
@@ -47,7 +47,7 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('contact', ['1' => 'Scott Erickson'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('contact', ['' => 'Please Select Contact','1' => 'Scott Erickson'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
                         <div class="form-group row">
@@ -57,7 +57,7 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('assets', ['1' => 'Battery Backup','2' => 'Power Supply','3' => 'Loop Detector'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('assets', ['' => 'Please Select Asset','1' => 'Battery Backup','2' => 'Power Supply','3' => 'Loop Detector'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('billable', ['1' => 'Yes','2' => 'No'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('billable', ['' => 'Please Select Billable','1' => 'Yes','2' => 'No'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
                         <div class="form-group row">
@@ -130,13 +130,13 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('urgency', ['1' => 'High','2' => 'Low'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('urgency', ['' => 'Please Select Urgency','1' => 'High','2' => 'Low'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
-                        
+
 
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="form-group row">
                             <div class="col-md-12 col-sm-12 text-left">
@@ -162,9 +162,9 @@
                             </div>
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
-                                {!! Form::selectMonth('month', null, ['class' => 'form-control small-field']) !!}
-                                {!! Form::select('day', range(1, 31), null, ['class' => 'form-control small-field'] )!!}
-                                {!! Form::select('Year', range(1980, 2020), null, ['class' => 'form-control small-field'] )!!}
+                                {!! Form::select('month',['' => 'Month'] + range(1, 12), null, ['class' => 'form-control small-field']) !!}
+                                {!! Form::select('day', ['' => 'Day'] + range(1, 31), null, ['class' => 'form-control small-field'] )!!}
+                                {!! Form::select('Year', ['' => 'Year'] + range(1980, 2020), null, ['class' => 'form-control small-field'] )!!}
                             </div>
                         </div>
 
