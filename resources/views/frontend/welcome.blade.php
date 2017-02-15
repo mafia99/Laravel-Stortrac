@@ -223,6 +223,7 @@
             </div>
         </div>
         <div class="col-md-4">
+            <img src='{{ asset('images/SurvelanceCam.png')}}' style="width: 100%;margin-bottom: 20px;" />
             <img src="{{ asset('images/AdditionalCameras.png')}}" style="width: 100%;"/>
         </div>
     </div>
