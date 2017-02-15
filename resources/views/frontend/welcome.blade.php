@@ -154,7 +154,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title pull-left">Assets</h3>
                             <div class="pull-right">
-                                <a href="{{ url('/assets') }}">Go to Assets Page <span class="fa-stack fa-lg">
+                                <a href="{{ url('/assets') }}" class="my-assets" data-target="#theModal" data-toggle="modal">Go to Assets Page <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
                                     </span>
@@ -186,7 +186,7 @@
                             </div>
                             <div class="pull-right text-right">
                                 <p>
-                                    stor0871@cubesmart.com <span class="fa-stack fa-lg">
+                                    <a href="mailto:stor0871@cubesmart.com" target="_blank">stor0871@cubesmart.com</a> <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
                                     </span>
@@ -224,6 +224,18 @@
         </div>
         <div class="col-md-4">
             <img src="{{ asset('images/AdditionalCameras.png')}}" style="width: 100%;"/>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-center" id="theModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+<div class="modal fade text-center" id="detailModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
         </div>
     </div>
 </div>
@@ -269,7 +281,20 @@
         }
     }
     //initMap();
+    $(".my-assets").click(function () {
+        // get needed html
+        var url = $(this).attr('href');
+        $.get(url, function (result) {
+            // append response to body
+            $('#theModal .modal-content').html(result);
+            // open modal
+            //$('#myModal2').modal(/* options object here*/);
+
+        });
+    });
+    
 </script>
+
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeKKKx5x231Gzm6XeIOvjcZrjgiigU7aI&callback=initMap">
 </script>

@@ -4,7 +4,7 @@
 
 
 <div class="row">
-    <div class="col-md-12" >
+    <div class="col-md-8" >
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Assets</h3>
@@ -30,7 +30,7 @@
                             <td>{!! ($asset['model'])?$asset['model']:'--'; !!}</td>
                             <td>{!! ($asset['serialNumber'])?$asset['serialNumber']:'--'; !!}</td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
                 <table class="table">
@@ -44,8 +44,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td> -- </td>
-                            <td>{!! ($asset['maintenanceNotes'])?$asset['maintenanceNotes']:'--' !!}</td>
+                            <td> {!! isset($asset['customFields']['01a89cd3ae214e50a58fd237f6cac5d7'])?$asset['customFields']['01a89cd3ae214e50a58fd237f6cac5d7']:'--' !!} </td>
+                            <td>{!! isset($asset['customFields']['ab64557441204cc695a63b07aeb39637'])?$asset['customFields']['ab64557441204cc695a63b07aeb39637']:'--' !!}</td>
                             <td>{!! ($asset['manufacturer'])?$asset['manufacturer']:'--'; !!}</td>
                         </tr>
 
@@ -55,7 +55,39 @@
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Attachment</h3>
+
+            </div>
+            <div class="panel-body text-left" style="padding: 0;"> 
+                @if (count($asset['attachments']) > 0)
+                <img src="https://api.fieldaware.net/asset/{{$asset['uuid']}}/attachment/{{$asset['attachments'][0]['uuid']}}?api_key=dadd0475434941d1b1a6b5400d5fa870" style="width: 100%;" />
+                @endif
+            </div>
+        </div>
+    </div>
 </div>
 
+<div class="row">
+    <div class="col-md-8" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Recent Maintenance</h3>
 
+            </div>
+            <div class="panel-body text-left">  </div>
+        </div>
+    </div>
+    <div class="col-md-4" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Maintenance Notes</h3>
+
+            </div>
+            <div class="panel-body text-left"> {!! ($asset['maintenanceNotes'])?$asset['maintenanceNotes']:'--' !!} </div>
+        </div>
+    </div>
+</div>
 @endsection

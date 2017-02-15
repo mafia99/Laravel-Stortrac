@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body id="app-layout">
+<body>
 
     @yield('content')
     <!-- JavaScripts -->

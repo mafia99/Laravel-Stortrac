@@ -60,6 +60,50 @@
                                 {!! Form::select('assets', ['1' => 'Battery Backup','2' => 'Power Supply','3' => 'Loop Detector'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <div class="col-md-12 col-sm-12 text-left">
+                                {!! Form::label('title', 'Quote Description', ['class' => 'form-label']) !!}
+                            </div>
+                            <!-- <span class="help">e.g. "Jonh Smith"</span> -->
+                            <div class="col-md-12 col-sm-12">                                       
+                                {!! Form::textarea('description',null,['class' => 'form-control','size' => '30x5'])  !!}
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 col-sm-12 text-left" style="margin-top: 4px;">
+                                <div class="btn btn-default btn-file" style="display:block">
+                                    <input type="file" hidden>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <div class="col-md-12 col-sm-12 text-left">
+                                {!! Form::label('title', 'Existing Parts', ['class' => 'form-label']) !!}
+                            </div>
+                            <!-- <span class="help">e.g. "Jonh Smith"</span> -->
+                            <div class="col-md-2 col-sm-6">                                       
+                                {!! Form::text('make', null, ['class' => 'form-control','placeholder' => 'Make']) !!}
+                            </div>
+                            <div class="col-md-2 col-sm-6">                                       
+                                {!! Form::text('model', null, ['class' => 'form-control','placeholder' => 'Model']) !!}
+                            </div>
+                            <div class="col-md-2 col-sm-6">                                       
+                                {!! Form::text('serial', null, ['class' => 'form-control','placeholder' => 'Serial #']) !!}
+                            </div>
+                            <div class="col-md-3 col-sm-6">                                       
+                                {!! Form::text('location', null, ['class' => 'form-control','placeholder' => 'Location']) !!}
+                            </div>
+                            <div class="col-md-3 col-sm-6">                                       
+                                {!! Form::text('condition', null, ['class' => 'form-control','placeholder' => 'Condition']) !!}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group row">
                             <div class="col-md-12 col-sm-12 text-left">
                                 {!! Form::label('title', 'Job / Service Request', ['class' => 'form-label']) !!}
@@ -89,39 +133,11 @@
                                 {!! Form::select('urgency', ['1' => 'High','2' => 'Low'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                {!! Form::label('title', 'Parts Needed', ['class' => 'form-label']) !!}
-                            </div>
-                            <!-- <span class="help">e.g. "Jonh Smith"</span> -->
-                            <div class="col-md-12 col-sm-12">                                       
-
-                                {!! Form::select('billable', ['1' => 'Yes','2' => 'Received'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
-                            </div>
-                        </div>
-
-
-
+                        
 
                     </div>
+                    
                     <div class="col-md-6">
-                        <div class="form-group row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                {!! Form::label('title', 'Quote Description', ['class' => 'form-label']) !!}
-                            </div>
-                            <!-- <span class="help">e.g. "Jonh Smith"</span> -->
-                            <div class="col-md-12 col-sm-12">                                       
-                                {!! Form::textarea('description',null,['class' => 'form-control','size' => '30x5'])  !!}
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                <div class="btn btn-default btn-file" style="display:block">
-                                    <input type="file" hidden>
-                                </div>
-                            </div>
-
-                        </div>
                         <div class="form-group row">
                             <div class="col-md-12 col-sm-12 text-left">
                                 {!! Form::label('title', 'PO Number', ['class' => 'form-label']) !!}
