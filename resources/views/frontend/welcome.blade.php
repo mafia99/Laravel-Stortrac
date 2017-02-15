@@ -154,10 +154,11 @@
                         <div class="panel-heading">
                             <h3 class="panel-title pull-left">Assets</h3>
                             <div class="pull-right">
-                                Go to Assets Page <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
-                                </span>
+                                <a href="{{ url('/assets') }}">Go to Assets Page <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
                             </div>
                             <div class="clearfix"></div>
                         </div>

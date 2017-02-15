@@ -16,8 +16,10 @@ Route::auth();
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', 'Frontend\HomeController@index');
-
+    
+    Route::resource('service', 'Frontend\ServiceController');
+    Route::resource('quote', 'Frontend\QuoteController');
+    Route::resource('assets', 'Frontend\AssetsController');
+    
     //Route::get('/home', 'HomeController@index');
 });
-
-Route::auth();

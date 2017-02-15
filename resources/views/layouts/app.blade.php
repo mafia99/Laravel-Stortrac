@@ -50,8 +50,8 @@
                 
                 <ul class="nav navbar-nav">
                     <li class="{{$controller=='HomeController' ? 'active' : ''}}"><a href="{{ url('/') }}">Overview</a></li>
-                    <li><a href="{{ url('/') }}">Service Request</a></li>
-                    <li><a href="{{ url('/') }}">Quote Request</a></li>
+                    <li class="{{$controller=='ServiceController' ? 'active' : ''}}"><a href="{{ url('/service') }}">Service Request</a></li>
+                    <li class="{{$controller=='QuoteController' ? 'active' : ''}}"><a href="{{ url('/quote') }}">Quote Request</a></li>
                     <li><a href="{{ url('/') }}">Video Recording</a></li>
                     <li><a href="{{ url('/') }}">Resources</a></li>
                 </ul>
