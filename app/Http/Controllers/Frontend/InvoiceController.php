@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Session;
 
-class AssetsController extends Controller {
+class InvoiceController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -48,11 +48,15 @@ class AssetsController extends Controller {
      */
     public function show($id) {
         
-        $url = 'https://api.fieldaware.net/asset/'.$id.'?api_key=dadd0475434941d1b1a6b5400d5fa870';
+        $url = 'https://api.fieldaware.net/invoice/'.$id.'?api_key=dadd0475434941d1b1a6b5400d5fa870';
         $content = file_get_contents($url);
         $asset = json_decode($content, true);
 
-        return View('frontend.assets.show')->with('asset', $asset);
+        $customerId = $asset['customer']['uuid'];
+        $customerUrl = 'https://api.fieldaware.net/customer/'.$customerId.'?api_key=dadd0475434941d1b1a6b5400d5fa870';
+        $customerContent = file_get_contents($customerUrl);
+        $customer = json_decode($customerContent, true);
+        return View('frontend.invoice.show')->with('asset', $asset)->with('customer', $customer);
     }
 
     /**

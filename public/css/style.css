@@ -179,6 +179,17 @@ body {
     border-bottom: none;
     border-top: none;
 }
+.color-table .table > thead > tr{
+    background-color: #E1DFE1;
+}
+.color-table .table td,
+.color-table .table th{
+    border-right: 1px solid #EBEBEB;
+    border-top: 1px solid #EBEBEB;
+}
+.color-table .table .bg-info{
+    background-color: #F8F8F8;
+}
 .map-view, .street-view,
 .map-view:hover, .street-view:hover{
     padding: 6px;

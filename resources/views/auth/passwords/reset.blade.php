@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 move-center top-200">
-            <img src="{{ asset('images/StorTracLogo1.png')}}" />
+            <img src="{{ asset('images/logo75pxw.png')}}" />
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container white-panel">
+<div class="container white-panel over-page">
     <div class="row">
         <div class="col-md-12 pagecrumb">
             <h3 class="panel-title pull-left">05-Cubesmart L.P <label>05-026 Schaumburg</label></h3>
-            <div class="pull-right"><img src="{{ asset('images/StorTracLogo1.png')}}" /></div>
+            <div class="pull-right"><img src="{{ asset('images/logo75pxw.png')}}" style="height:53px;" /></div>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -89,10 +89,12 @@
                                     <td>$40.50</td>
                                     <td>Wed 04/13/16</td>
                                     <td>
-                                        <span class="fa-stack fa-lg width-1em">
-                                            <i class="fa fa-square-o fa-stack-2x"></i>
-                                            <i class="fa fa-search fa-stack-1x"></i>
-                                        </span>
+                                        <a href="{{ url('/invoice/8a48c3db6fc343709d9d4ac5c3e8f24f') }}" class="my-invoice" data-target="#invoiceModal" data-toggle="modal">
+                                            <span class="fa-stack fa-lg width-1em">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-search fa-stack-1x"></i>
+                                            </span>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -101,10 +103,12 @@
                                     <td>$342.00</td>
                                     <td>Fri 03/18/16</td>
                                     <td>
-                                        <span class="fa-stack fa-lg width-1em">
-                                            <i class="fa fa-square-o fa-stack-2x"></i>
-                                            <i class="fa fa-search fa-stack-1x"></i>
-                                        </span>
+                                        <a href="{{ url('/invoice/7ca537b68a174ab780e29dac90b8adf8') }}" class="my-invoice" data-target="#invoiceModal" data-toggle="modal">
+                                            <span class="fa-stack fa-lg width-1em">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-search fa-stack-1x"></i>
+                                            </span>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -113,10 +117,12 @@
                                     <td>$43.50</td>
                                     <td>Mon 01/18/16</td>
                                     <td>
-                                        <span class="fa-stack fa-lg width-1em">
-                                            <i class="fa fa-square-o fa-stack-2x"></i>
-                                            <i class="fa fa-search fa-stack-1x"></i>
-                                        </span>
+                                        <a href="{{ url('/invoice/563f4c4b6c4a4801add68891d4344004') }}" class="my-invoice" data-target="#invoiceModal" data-toggle="modal">
+                                            <span class="fa-stack fa-lg width-1em">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-search fa-stack-1x"></i>
+                                            </span>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -125,10 +131,12 @@
                                     <td>$92.25</td>
                                     <td>Fri 01/15/16</td>
                                     <td>
-                                        <span class="fa-stack fa-lg width-1em">
-                                            <i class="fa fa-square-o fa-stack-2x"></i>
-                                            <i class="fa fa-search fa-stack-1x"></i>
-                                        </span>
+                                        <a href="{{ url('/invoice/721b504867fd483385aa4637255748b7') }}" class="my-invoice" data-target="#invoiceModal" data-toggle="modal">
+                                            <span class="fa-stack fa-lg width-1em">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-search fa-stack-1x"></i>
+                                            </span>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -137,10 +145,12 @@
                                     <td>$00.00</td>
                                     <td>Tue 12/08/15</td>
                                     <td>
-                                        <span class="fa-stack fa-lg width-1em">
-                                            <i class="fa fa-square-o fa-stack-2x"></i>
-                                            <i class="fa fa-search fa-stack-1x"></i>
-                                        </span>
+                                        <a href="{{ url('/invoice/b5c4fe393a45461a861fcb3b4100898b') }}" class="my-invoice" data-target="#invoiceModal" data-toggle="modal">
+                                            <span class="fa-stack fa-lg width-1em">
+                                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                                <i class="fa fa-search fa-stack-1x"></i>
+                                            </span>
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -240,6 +250,12 @@
         </div>
     </div>
 </div>
+<div class="modal fade text-center" id="invoiceModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
 <script>
 
     var map;
@@ -251,7 +267,9 @@
             zoom: 18,
             center: myLatLng,
             mapTypeId: 'roadmap',
-            disableDefaultUI: true
+            disableDefaultUI: true,
+            zoomControl: true,
+            streetViewControl: true,
         });
 
         var marker = new google.maps.Marker({
@@ -267,14 +285,15 @@
     }
     function togglePanorama(option) {
         if (option == 'map') {
-            map.setMapTypeId('roadmap');
+            //map.setMapTypeId('roadmap');
+            map.streetView.setVisible(false);
             $('.street-view').removeClass('active');
             $('.map-view').addClass('active');
             //$('#message').empty().append('Click here to take a tour of our office.');
 
         } else {
-            //map.streetView.setVisible(true);
-            map.setMapTypeId('satellite');
+            map.streetView.setVisible(true);
+            //map.setMapTypeId('satellite');
             $('.street-view').addClass('active');
             $('.map-view').removeClass('active');
             //$('#message').empty().append('Back to the map.');
@@ -294,6 +313,18 @@
         });
     });
     
+    $(".my-invoice").click(function () {
+        // get needed html
+        var url = $(this).attr('href');
+        $.get(url, function (result) {
+            // append response to body
+            $('#invoiceModal .modal-content').html(result);
+            // open modal
+            //$('#myModal2').modal(/* options object here*/);
+
+        });
+    });
+
 </script>
 
 <script async defer

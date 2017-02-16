@@ -5,7 +5,7 @@
 <div class="container grid">
     <div class="row">
         <div class="col-md-4 move-center top-200" >
-            <img src="{{ asset('images/StorTracLogo1.png')}}" />
+            <img src="{{ asset('images/logo75pxw.png')}}" />
             <div class="panel panel-default">
                 <div class="panel-heading text-left"><label>Log In</label>
                     <a class="btn btn-link forgot" href="{{ url('/password/reset') }}">Forgot Password?</a>

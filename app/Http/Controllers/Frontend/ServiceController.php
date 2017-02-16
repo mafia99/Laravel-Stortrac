@@ -18,7 +18,16 @@ class ServiceController extends Controller
     public function index()
     {
         //customer Id = 468
-        return View('frontend.service.index');
+        $url = 'https://api.fieldaware.net/task/?api_key=dadd0475434941d1b1a6b5400d5fa870';
+        $content = file_get_contents($url);
+        $tasks = json_decode($content, true);
+        $taskList = array(0=>'Please Select Task');
+        foreach ($tasks['items'] as $task){
+            
+            $taskList[] = $task['name'];
+        }
+        //return View('frontend.assets.show')->with('asset', $asset);
+        return View('frontend.service.index')->with('tasklist', $taskList);
     }
 
     /**

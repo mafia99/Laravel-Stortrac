@@ -83,7 +83,7 @@
                     <div class="col-md-12">
                         <div class="form-group row">
                             <div class="col-md-12 col-sm-12 text-left">
-                                {!! Form::label('title', 'Existing Parts', ['class' => 'form-label']) !!}
+                                {!! Form::label('title', 'Existing Assets', ['class' => 'form-label']) !!}
                             </div>
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-2 col-sm-6">                                       
@@ -110,7 +110,7 @@
                             </div>
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
-                                {!! Form::text('service_request', null, ['class' => 'form-control']) !!}
+                                {!! Form::select('service_request', $tasklist, null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
                         <div class="form-group row">
@@ -130,7 +130,7 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('urgency', ['' => 'Please Select Urgency','1' => 'High','2' => 'Low'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('urgency', ['' => 'Please Select Urgency','1' => 'High','2' => 'Medium','3' => 'Low'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
 
