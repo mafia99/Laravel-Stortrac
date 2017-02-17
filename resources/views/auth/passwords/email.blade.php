@@ -2,10 +2,7 @@
 
 <!-- Main Content -->
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 move-center top-200 ">
-            <img src="{{ asset('images/logo75pxw.png')}}" />
+
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
                 <div class="panel-body">
@@ -42,7 +39,4 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 @endsection

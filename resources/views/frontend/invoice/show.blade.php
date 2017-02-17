@@ -1,3 +1,6 @@
+@extends('layouts.modal')
+
+@section('content')
 <div class="row">
     <div class="col-md-8" >
         <div class="panel panel-default">
@@ -161,3 +164,4 @@
         </div>
     </div>
 </div>
+@endsection

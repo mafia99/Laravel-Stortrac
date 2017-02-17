@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12 pagecrumb">
             <h3 class="panel-title pull-left">05-Cubesmart L.P <label>05-026 Schaumburg</label></h3>
-            <div class="pull-right"><img src="{{ asset('images/logo75pxw.png')}}" style="height:53px;" /></div>
+            <div class="pull-right"><img src="{{ asset('images/logo75pxw.png')}}" style="height:53px; padding-bottom: 10px;" /></div>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -304,6 +304,7 @@
     $(".my-assets").click(function () {
         // get needed html
         var url = $(this).attr('href');
+       
         $.get(url, function (result) {
             // append response to body
             $('#theModal .modal-content').html(result);
@@ -316,6 +317,7 @@
     $(".my-invoice").click(function () {
         // get needed html
         var url = $(this).attr('href');
+        $('#invoiceModal .modal-content').html('');
         $.get(url, function (result) {
             // append response to body
             $('#invoiceModal .modal-content').html(result);
