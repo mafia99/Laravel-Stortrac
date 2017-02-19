@@ -1,6 +1,4 @@
-@extends('layouts.modal')
 
-@section('content')
 
 <div class="row">
     <div class="col-md-12 move-center" >
@@ -61,4 +59,4 @@
         });
     });
 </script>
-@endsection
+

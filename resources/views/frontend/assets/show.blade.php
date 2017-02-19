@@ -1,6 +1,3 @@
-@extends('layouts.modal')
-
-@section('content')
 
 
 <div class="row">
@@ -90,4 +87,4 @@
         </div>
     </div>
 </div>
-@endsection
+
