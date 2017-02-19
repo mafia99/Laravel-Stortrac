@@ -29,6 +29,7 @@
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
+            
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -47,15 +48,16 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                
+                @if($controller=='HomeController' && $action == 'index')
+                @else
                 <ul class="nav navbar-nav">
-                    <li class="{{$controller=='HomeController' ? 'active' : ''}}"><a href="{{ url('/') }}">Overview</a></li>
+                    <li class="{{$controller=='HomeController' ? 'active' : ''}}"><a href="{{ url('/home/a4bcb5f9c3bb4eab9fa6c60076ddb653') }}">Overview</a></li>
                     <li class="{{$controller=='ServiceController' ? 'active' : ''}}"><a href="{{ url('/service') }}">Service Request</a></li>
                     <li class="{{$controller=='QuoteController' ? 'active' : ''}}"><a href="{{ url('/quote') }}">Quote Request</a></li>
-                    <li><a href="{{ url('/') }}">Video Recording</a></li>
-                    <li><a href="{{ url('/') }}">Resources</a></li>
+                    <li><a href="{{ url('/video') }}">Video Recording</a></li>
+                    <li><a href="{{ url('/home/a4bcb5f9c3bb4eab9fa6c60076ddb653') }}">Resources</a></li>
                 </ul>
-
+                @endif
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -78,6 +80,7 @@
                     @endif
                 </ul>
             </div>
+            
         </div>
     </nav>
 

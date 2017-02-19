@@ -182,50 +182,5 @@
         </div>
     </div>
 </div>
-<script>
 
-    var map;
-
-    function initMap() {
-        var myLatLng = {lat: 42.0066092, lng: -88.1498724};
-
-        map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 18,
-            center: myLatLng,
-            mapTypeId: 'roadmap',
-            disableDefaultUI: true
-        });
-
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            label: {
-                color: '#8C171A',
-                fontWeight: 'bold',
-                text: '1730 Irving Park Rd',
-            }
-
-        });
-    }
-    function togglePanorama(option) {
-        if (option == 'map') {
-            map.setMapTypeId('roadmap');
-            $('.street-view').removeClass('active');
-            $('.map-view').addClass('active');
-            //$('#message').empty().append('Click here to take a tour of our office.');
-
-        } else {
-            //map.streetView.setVisible(true);
-            map.setMapTypeId('satellite');
-            $('.street-view').addClass('active');
-            $('.map-view').removeClass('active');
-            //$('#message').empty().append('Back to the map.');
-
-        }
-    }
-    //initMap();
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeKKKx5x231Gzm6XeIOvjcZrjgiigU7aI&callback=initMap">
-</script>
 @endsection

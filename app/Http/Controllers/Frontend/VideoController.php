@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Session;
 
-class HomeController extends Controller
+class VideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //customer Id = 468
-        return View('frontend.home.index');
+       
+        //return View('frontend.assets.show')->with('asset', $asset);
+        return View('frontend.video.index');
+        
     }
 
     /**
@@ -39,11 +42,13 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'location' => 'required',
-            
+            'camera_location' => 'required',
+            'month' => 'required',
+            'day' => 'required',
+            'year' => 'required',
         ]);
-        //Session::flash('flash_message', 'Service request successfully added!');
-        return redirect('/home/a4bcb5f9c3bb4eab9fa6c60076ddb653');
+        Session::flash('flash_message', 'Video recording successfully added!');
+        return redirect('video');
     }
 
     /**
@@ -54,7 +59,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        return View('frontend.home.welcome');
+        //
     }
 
     /**
