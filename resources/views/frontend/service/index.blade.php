@@ -57,7 +57,7 @@
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
                             <div class="col-md-12 col-sm-12">                                       
 
-                                {!! Form::select('assets', ['' => 'Please Select Asset','1' => 'Battery Backup','2' => 'Power Supply','3' => 'Loop Detector'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
+                                {!! Form::select('assets', ['' => 'Please Select Asset','1' => 'Battery Backup','2' => 'Power Supply','3' => 'Loop Detector','4'=>'Gate Operator','5'=>'Keypad','6'=>'Gate','7'=>'Security Cameras - East'], null,['class' =>'form-control'], ['placeholder' => 'Optional']); !!}
                             </div>
                         </div>
                         <div class="form-group row">

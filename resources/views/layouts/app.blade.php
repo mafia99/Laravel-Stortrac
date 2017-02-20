@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
 
+    @yield('header-scripts')
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
+    <script src="{{ asset('js/jquery.min.js')}}" type="text/javascript"></script>
     <style>
         body {
             font-family: 'Lato';
@@ -90,8 +92,9 @@
         
     </div>
     <!-- JavaScripts -->
-    <script src="{{ asset('js/jquery.min.js')}}" type="text/javascript"></script>
+    
     <script src="{{ asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    @yield('footer-scripts')
 </body>
 </html>

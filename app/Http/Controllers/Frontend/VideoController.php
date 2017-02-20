@@ -47,7 +47,7 @@ class VideoController extends Controller
             'day' => 'required',
             'year' => 'required',
         ]);
-        Session::flash('flash_message', 'Video recording successfully added!');
+        Session::flash('flash_message', 'Please click this link to view the video: <a href="#">Video</a>');
         return redirect('video');
     }
 

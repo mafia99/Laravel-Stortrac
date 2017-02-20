@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('header-scripts')
+
+@endsection
+
 @section('content')
 <div class="container white-panel">
     <div class="row">
@@ -51,21 +55,34 @@
                                 {!! Form::label('start', 'Start', ['class' => 'form-label']) !!}
                             </div>
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
-                            
+
                             <div class="col-md-6 col-sm-6 text-left">
                                 {!! Form::label('end', 'End', ['class' => 'form-label']) !!}
                             </div>
-                            <div class="col-md-6 col-sm-6">                                       
-                                {!! Form::select('start',['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM','9PM','10PM','11PM'], null, ['class' => 'form-control ']) !!}
+
+                            <div class="col-md-6 col-sm-6">  
+                                <div class="input-group clockpicker">
+                                    <input type="text" class="form-control form-labe" name="start" value="09:30">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-clock-o"></span>
+                                    </span>
+                                </div>
                                 
+                                <!-- {!! Form::select('start',['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM','9PM','10PM','11PM'], null, ['class' => 'form-control ']) !!}-->                                
                             </div>
                             <!-- <span class="help">e.g. "Jonh Smith"</span> -->
-                            <div class="col-md-6 col-sm-6">                                       
-                                {!! Form::select('end',['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM','9PM','10PM','11PM'], null, ['class' => 'form-control ']) !!}
-                                
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group clockpicker2">
+                                    <input type="text" class="form-control form-labe" name="start" value="09:30">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-clock-o"></span>
+                                    </span>
+                                </div>
+                                <!--{!! Form::select('end',['12AM','1AM','2AM','3AM','4AM','5AM','6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM','9PM','10PM','11PM'], null, ['class' => 'form-control ']) !!}-->
+
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="col-md-6">
                         <div class="form-group row">
@@ -79,9 +96,9 @@
                                 {!! Form::select('year', ['' => 'Year'] + range(1980, 2020), null, ['class' => 'form-control small-field'] )!!}
                             </div>
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="col-md-12">
                         <div class="form-group">  
                             <div class="pull-right col-md-3">
@@ -95,5 +112,15 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $('.clockpicker').clockpicker({donetext:'done'});
+        $('.clockpicker2').clockpicker({donetext:'done'});
+    });
+</script>
+@section('footer-scripts')
+<script type="text/javascript" src="{{ asset('js/bootstrap-clockpicker.min.js')}}"></script>
+
+@endsection
 
 @endsection

@@ -218,7 +218,7 @@
                     <div id="map"></div>
                     <div class="panel panel-default" style="bottom: -52px;position: absolute;width: 96.3%;z-index: 99">
                         <div class="panel-heading" style="height: 50px;padding: 15px;">
-                            <h3 class="panel-title pull-left">1730 Irving Park Rd, Hanover Park, IL 60133</h3>
+                            <h3 class="panel-title pull-left">1730 Irving Park Road, Schaumburg, IL 60133</h3>
                             <div class="pull-right">
                                 <a href="javascript:void(0)" class="map-view active" onclick="togglePanorama('map');" >Map View</a>
                                 <a href="javascript:void(0)" class="street-view " onclick="togglePanorama('street');" >Street View</a>
@@ -261,7 +261,7 @@
     var map;
 
     function initMap() {
-        var myLatLng = {lat: 42.0066708, lng: -88.1481695};
+        var myLatLng = {lat: 42.0067107, lng: -88.1481695};
 
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
@@ -285,15 +285,15 @@
     }
     function togglePanorama(option) {
         if (option == 'map') {
-            //map.setMapTypeId('roadmap');
-            map.streetView.setVisible(false);
+            map.setMapTypeId('roadmap');
+            //map.streetView.setVisible(false);
             $('.street-view').removeClass('active');
             $('.map-view').addClass('active');
             //$('#message').empty().append('Click here to take a tour of our office.');
 
         } else {
-            map.streetView.setVisible(true);
-            //map.setMapTypeId('satellite');
+            //map.streetView.setVisible(true);
+            map.setMapTypeId('satellite');
             $('.street-view').addClass('active');
             $('.map-view').removeClass('active');
             //$('#message').empty().append('Back to the map.');
