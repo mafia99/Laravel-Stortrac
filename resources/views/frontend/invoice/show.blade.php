@@ -94,9 +94,9 @@
                             <td>{!! ($ass['name'])?$ass['name']:'--'; !!}</td>
                             <td>{!! ($ass['description'])?$ass['description']:'--'; !!}</td>
                             <td class="text-center">{!! ($ass['quantity'])?$ass['quantity']:'--'; !!}</td>
-                            <td>${!! ($ass['cost'])?$ass['cost']:'0'; !!}</td>
+                            <td>${!! ($ass['cost'])?number_format($ass['cost'],2):'0.00'; !!}</td>
                             <td class="text-center">--</td>
-                            <td>${!! ($ass['price'])?$ass['price']:'0'; !!}</td>
+                            <td>${!! ($ass['price'])?number_format($ass['price'],2):'0.00'; !!}</td>
                         </tr>
                         <tr class='bg-info'><td colspan="6">{!! ($ass['note'])?$ass['note']:'--'; !!}</td></tr>
                     @endif
@@ -118,7 +118,7 @@
         <table class="table text-left">
             <thead>
                 <tr>
-                    <th style="width:20%">Labour</th>
+                    <th style="width:20%">Labor</th>
                     <th style="width:15%">Hours</th>
                     <th style="width:30%">Price</th>
                     <th style="width:15%" class="text-center">Tax</th>
@@ -132,9 +132,9 @@
                             <td>{!! ($ass['name'])?$ass['name']:'--'; !!}</td>
                             
                             <td>{!! ($ass['quantity'])?$ass['quantity']:'--'; !!}</td>
-                            <td>${!! ($ass['cost'])?$ass['cost']:'0'; !!} {!! ($ass['description'])?$ass['description']:'--'; !!}</td>
+                            <td>${!! ($ass['cost'])?number_format($ass['cost'],2):'0.00'; !!} {!! ($ass['description'])?$ass['description']:'--'; !!}</td>
                             <td class="text-center">--</td>
-                            <td>${!! ($ass['price'])?$ass['price']:'0'; !!}</td>
+                            <td>${!! ($ass['price'])?number_format($ass['price']*$ass['quantity'],2):'0.00'; !!}</td>
                         </tr>
                         
                     @endif
@@ -148,17 +148,17 @@
     <div class="col-md-6 pull-right">
         <div class="panel panel-default">
             <div class="panel-body" style="padding: 0">
-                <span style="display: inline-block; padding: 5px 10px 9px;">
-                    Net Item: $ {!! $asset['totals']['netAmount'] !!}
+                <span style="display: inline-block; padding: 5px 5px 9px -1px;">
+                    Net Item: $ {!! number_format($asset['totals']['netAmount'],2) !!}
                 </span>
-                <span style="display: inline-block; padding: 5px 10px 9px;">
-                    Net Labor: $ {!! $asset['totals']['netLaborAmount'] !!}
+                <span style="display: inline-block; padding: 5px 5px 9px;">
+                    Net Labor: $ {!! number_format($asset['totals']['netLaborAmount'],2) !!}
                 </span>
-                <span style="display: inline-block; padding: 5px 10px 9px;">
-                    Tax: $ {!! $asset['totals']['totalTax'] !!}
+                <span style="display: inline-block; padding: 5px 5px 9px;">
+                    Tax: $ {!! number_format($asset['totals']['totalTax'],2) !!}
                 </span>
                 <span class="btn btn-primary" style="display: inline">
-                    Total: $ {!! $asset['totals']['totalAmount'] !!}
+                    Total: $ {!! number_format($asset['totals']['totalAmount'],2) !!}
                 </span>
             </div>
         </div>

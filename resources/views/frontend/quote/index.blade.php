@@ -96,7 +96,7 @@
                                 {!! Form::text('serial', null, ['class' => 'form-control','placeholder' => 'Serial #']) !!}
                             </div>
                             <div class="col-md-3 col-sm-6">                                       
-                                {!! Form::text('location', null, ['class' => 'form-control','placeholder' => 'Location']) !!}
+                                {!! Form::text('asset_location', null, ['class' => 'form-control','placeholder' => 'Location']) !!}
                             </div>
                             <div class="col-md-3 col-sm-6">                                       
                                 {!! Form::text('condition', null, ['class' => 'form-control','placeholder' => 'Condition']) !!}

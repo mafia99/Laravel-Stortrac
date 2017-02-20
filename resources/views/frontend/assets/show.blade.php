@@ -67,14 +67,44 @@
     </div>
 </div>
 
+
 <div class="row">
     <div class="col-md-8" >
-        <div class="panel panel-default">
+        <div class="panel panel-default jobs-panel">
             <div class="panel-heading">
                 <h3 class="panel-title">Recent Maintenance</h3>
 
             </div>
-            <div class="panel-body text-left">  </div>
+            <div class="panel-body text-left">  
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>State</th>
+                            <th>ID</th>
+                            <th>When</th>
+                            <th>Job Lead</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Invoice <i class="fa fa-check-circle"></i></td>
+                            <td>J1729</td>
+                            <td>12/06/16 9:17AM</td>
+                            <td>Jason Smith</td>
+                            <td>05-Cubsesmart L.P. 05-17</td>
+                        </tr>
+                        <tr>
+                            <td>Invoice <i class="fa fa-check-circle"></i></td>
+                            <td>J1951</td>
+                            <td>01/02/17 9:32AM</td>
+                            <td>Matt Knize</td>
+                            <td>05-Cubsesmart L.P. 05-17</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div class="col-md-4" >
