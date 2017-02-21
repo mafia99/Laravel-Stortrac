@@ -236,7 +236,6 @@
             <video style="margin-bottom: 20px; width: 100%;" type="video/mp4">
                 <source src="{{ asset('stortrac.mp4')}}"></source>
             </video>
-            <img src='{{ asset('images/SurvelanceCam.png')}}' style="width: 100%;margin-bottom: 20px;" />
             <img src="{{ asset('images/AdditionalCameras.png')}}" style="width: 100%;"/>
         </div>
     </div>
