@@ -47,7 +47,7 @@ class VideoController extends Controller
             'day' => 'required',
             'year' => 'required',
         ]);
-        Session::flash('flash_message', 'Please click this link to view the video: <a href="#">Video</a>');
+        Session::flash('flash_message', 'Please click this link to view the video: <a href="/stortrac.mp4">Video</a>');
         return redirect('video');
     }
 
