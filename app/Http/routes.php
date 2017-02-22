@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('quote', 'Frontend\QuoteController');
     Route::resource('assets', 'Frontend\AssetsController');
     Route::resource('invoice', 'Frontend\InvoiceController');
+    Route::resource('job', 'Frontend\JobController');
     Route::resource('video', 'Frontend\VideoController');
     //Route::get('/home', 'HomeController@index');
 });
