@@ -1,6 +1,4 @@
-@extends('layouts.modal')
 
-@section('content')
 <div class="row">
     <div class="col-md-8" >
         <div class="panel panel-default">
@@ -23,8 +21,8 @@
                     <tbody>
                         <tr>
                             <td>{!! ($job['jobId'])?$job['jobId']:'--'; !!}</td>
-                            <td></td>
-                            <td></td>
+                            <td>{!! ($job['createdOn']?$job['createdOn']:'--')!!}</td>
+                            <td>{!! ($job['scheduledOn']?$job['scheduledOn']:'--')!!}</td>
                             <td>{!! ($job['customFields']['20e6c28ace6d4c0b8b3d76e0beceffd9'])?$job['customFields']['20e6c28ace6d4c0b8b3d76e0beceffd9']:'--'; !!}</td>
                             <td>{!! ($job['customFields']['c3191f67454b4a3ca81b643cfe6718ba'])?$job['customFields']['c3191f67454b4a3ca81b643cfe6718ba']:'--'; !!}</td>
                         </tr>
@@ -40,7 +38,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td> {!! isset($customer['billingLocation'])?$customer['billingLocation']['streetName'].' '.$customer['billingLocation']['locality'].', '.$customer['billingLocation']['region'].' '.$customer['billingLocation']['postcode']:'--' !!} </td>
+                            <td> -- </td>
                             <td> 
                                 {!! isset($job['customFields']['718d9f4f47214b9caaa178a0d9880c1f'])?$job['customFields']['718d9f4f47214b9caaa178a0d9880c1f']:'--' !!} 
 
@@ -134,11 +132,11 @@
                         @foreach ($job['labor'] as $lab)
 
                         <tr>
-                            <td></td>
-                            <td>{!! ($lab['quantity'])?number_format($lab['quantity']/60,2):'--'; !!}</td>
+                            <td>Jason Smith</td>
+                            <td>{!! ($lab['quantity'])?str_replace(".","h ",number_format($lab['quantity']/60,2)).'min':'--'; !!}</td>
                             <td>0</td>
 
-                            <td>{!! ($lab['quantity'])?number_format($lab['quantity']/60,2):'--'; !!}</td>
+                            <td>{!! ($lab['quantity'])?str_replace(".","h ",number_format($lab['quantity']/60,2)).'min':'--'; !!}</td>
                             <td>
                                ${!! ($lab['unitPrice'])?number_format($lab['unitPrice']*($lab['quantity']/60),2):'--'; !!}
                             </td>
@@ -155,5 +153,3 @@
     </div>
 
 </div>
-
-@endsection

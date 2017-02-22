@@ -50,6 +50,7 @@
         // get needed html
         
         $('#detailModal .modal-content').html('');
+        $('.modal-backdrop').remove();
         var url = $(this).attr('href');
         $.get(url, function (result) {
             // append response to body
