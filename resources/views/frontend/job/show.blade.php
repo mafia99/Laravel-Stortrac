@@ -41,7 +41,6 @@
                             <td> -- </td>
                             <td> 
                                 {!! isset($job['customFields']['718d9f4f47214b9caaa178a0d9880c1f'])?$job['customFields']['718d9f4f47214b9caaa178a0d9880c1f']:'--' !!} 
-
                             </td>
 
                         </tr>
@@ -94,12 +93,11 @@
                             <td>{!! ($ass['note'])?$ass['note']:'--'; !!}</td>
                             <td>
                                 @foreach ($ass['attachments'] as $att)
-                                {!! $att['name'] !!} <br />
+                                <a href="https://fieldaware.s3.amazonaws.com/{{ $att['uuid'] }}/{{ $att['name'] }}" target="_blank">{!! $att['name'] !!}</a> <br />
                                 @endforeach
                             </td>
 
                         </tr>
-
 
                         @endforeach
                     </tbody>
