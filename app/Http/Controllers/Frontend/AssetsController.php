@@ -136,9 +136,12 @@ class AssetsController extends Controller {
             //Storage::disk('uploads')->put($img, $createdImage);
             if (isset($createdImage) && imagejpeg($createdImage, $img, 90)) {
                 imagedestroy($createdImage);
-                imagedestroy($imageResource);
+                
                 return $attachments[0]['name'];
+            }else{
+                imagejpeg($imageResource, $img, 90);
             }
+            imagedestroy($imageResource);
             return $attachments[0]['name'];
         }
         return '';
