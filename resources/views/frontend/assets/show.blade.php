@@ -60,7 +60,7 @@
             </div>
             <div class="panel-body text-left" style="padding: 0;"> 
                 @if (count($asset['attachments']) > 0)
-                <img src="https://api.fieldaware.net/asset/{{$asset['uuid']}}/attachment/{{$asset['attachments'][0]['uuid']}}?api_key=dadd0475434941d1b1a6b5400d5fa870" style="width: 100%;" />
+                <img src="https://fieldaware.s3.amazonaws.com/{{$asset['attachments'][0]['uuid']}}/{{$asset['attachments'][0]['name']}}" class="fix-image"  />
                 @endif
             </div>
         </div>

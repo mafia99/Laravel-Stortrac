@@ -47,10 +47,20 @@ class AssetsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-        
-        $url = 'https://api.fieldaware.net/asset/'.$id.'?api_key=dadd0475434941d1b1a6b5400d5fa870';
+
+        $url = 'https://api.fieldaware.net/asset/' . $id . '?api_key=dadd0475434941d1b1a6b5400d5fa870';
         $content = file_get_contents($url);
         $asset = json_decode($content, true);
+/*
+        if (count($asset['attachments']) > 0) {
+            $img = 'assets/'.$asset['attachments'][0]['name'];
+            
+            $imagecontent = file_get_contents('https://fieldaware.s3.amazonaws.com/'.$asset['attachments'][0]['uuid'].'/'.$asset['attachments'][0]['name']);
+            Storage::disk('uploads')->put($img, $imagecontent);
+            //file_put_contents($img, $imagecontent);
+        }
+*/
+
 
         return View('frontend.assets.show')->with('asset', $asset);
     }
