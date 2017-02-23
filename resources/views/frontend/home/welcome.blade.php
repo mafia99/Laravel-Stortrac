@@ -202,7 +202,7 @@
                                     </span>
                                 </p>
 
-                                1730 W. Irving Park Rd., Schaumburg, IL 60133 <span class="fa-stack fa-lg">
+                                1730 E. Irving Park Rd., Schaumburg, IL 60133 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -218,7 +218,7 @@
                     <div id="map"></div>
                     <div class="panel panel-default" style="bottom: -52px;position: absolute;width: 96.3%;z-index: 99">
                         <div class="panel-heading" style="height: 50px;padding: 15px;">
-                            <h3 class="panel-title pull-left">1730 W. Irving Park Rd., Schaumburg, IL 60133</h3>
+                            <h3 class="panel-title pull-left">1730 E. Irving Park Rd., Schaumburg, IL 60133</h3>
                             <div class="pull-right">
                                 <a href="javascript:void(0)" class="map-view active" onclick="togglePanorama('map');" >Map View</a>
                                 <a href="javascript:void(0)" class="street-view " onclick="togglePanorama('street');" >Street View</a>
@@ -263,7 +263,7 @@
     var map;
 
     function initMap() {
-        var myLatLng = {lat: 42.0067107, lng: -88.1481695};
+        var myLatLng = {lat: 42.0067067, lng: -88.147966};
 
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
@@ -280,7 +280,7 @@
             label: {
                 color: '#8C171A',
                 fontWeight: 'bold',
-                text: '1730 W. Irving Park Rd.'
+                text: '1730 E. Irving Park Rd.'
             }
 
         });
