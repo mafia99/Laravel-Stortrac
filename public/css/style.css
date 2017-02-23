@@ -209,6 +209,5 @@ body {
     opacity: 0.3;
 }
 .fix-image{
-    image-orientation: from-image;
     width: 100%;
 }

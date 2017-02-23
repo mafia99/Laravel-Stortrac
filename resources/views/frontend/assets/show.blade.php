@@ -60,7 +60,7 @@
             </div>
             <div class="panel-body text-left" style="padding: 0;"> 
                 @if (count($asset['attachments']) > 0)
-                <img src="https://fieldaware.s3.amazonaws.com/{{$asset['attachments'][0]['uuid']}}/{{$asset['attachments'][0]['name']}}" class="fix-image"  />
+                <img src="{{asset('uploads/assets/'.$attachedImage)}}" class="fix-image"  />
                 @endif
             </div>
         </div>
