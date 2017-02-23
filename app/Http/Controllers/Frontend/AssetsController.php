@@ -54,8 +54,10 @@ class AssetsController extends Controller {
 
         $attachedImage = '';
         if (count($asset['attachments']) > 0) {
-            if (!file_exists(public_path() . 'uploads/assets/' . $asset['attachments'][0]['name'])) {
+            if (!file_exists(public_path() . '/uploads/assets/' . $asset['attachments'][0]['name'])) {
                 $attachedImage = $this->getImageAndFixOriantation($asset['attachments']);
+            }else{
+                $attachedImage = $asset['attachments'][0]['name'];
             }
 
             //file_put_contents($img, $imagecontent);
